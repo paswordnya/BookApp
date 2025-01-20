@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../../App'
-type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'SplashScreen'>;
+type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
 type Props = {
   navigation: SplashScreenNavigationProp;
@@ -10,10 +10,10 @@ type Props = {
 
 const SplashScreen = ({ navigation }: Props) => {
   useEffect(() => {
-    // Navigate to the main screen after 3 seconds
+ 
     setTimeout(() => {
-        navigation.navigate('Home',{});// Or any other screen you want to navigate to
-    }, 3000); // Set your splash screen duration
+        navigation.navigate('Home',{});
+    }, 3000); 
   }, [navigation]);
 
   return (
