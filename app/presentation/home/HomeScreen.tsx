@@ -16,6 +16,12 @@ type Props = {
 };
 
 const HomeScreen = ({ navigation }: Props) =>{
+
+      useEffect(() => {
+      
+      }, [])
+
+
     const insets = useSafeAreaInsets(); // Mendapatkan safe area insets
      
     const { allBooks, wishlist, loading, error, searchBooks, addToWishlist,removeFromWishlist, fetchWishlist } = useHomeViewModel();

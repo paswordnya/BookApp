@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "490632169396",
+    "firebase_url": "https://mylatihan-bacd2.firebaseio.com",
+    "project_id": "mylatihan-bacd2",
+    "storage_bucket": "mylatihan-bacd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490632169396:android:187437f5639eac66ead4e1",
+        "android_client_info": {
+          "package_name": "com.bookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490632169396-b2976irgp0l11gigdbeqb8f4dgq2itn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5Zjykts8BDrF5Cp-qIO361XkaSywba0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490632169396-b2976irgp0l11gigdbeqb8f4dgq2itn2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "490632169396-0ek3mtf8lkpnuqd4fc68s7be4098t6pg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "alodokter.Alodokter-pa-test"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490632169396:android:3fbeba2a4cc6d1e2ead4e1",
+        "android_client_info": {
+          "package_name": "com.example.framework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490632169396-qqe3uglesamstq2nm6f2hrjtfsh4vc8f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.framework",
+            "certificate_hash": "84716526ffd2f8f48029d7e9e0ae2bd0820743d8"
+          }
+        },
+        {
+          "client_id": "490632169396-b2976irgp0l11gigdbeqb8f4dgq2itn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5Zjykts8BDrF5Cp-qIO361XkaSywba0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490632169396-b2976irgp0l11gigdbeqb8f4dgq2itn2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "490632169396-0ek3mtf8lkpnuqd4fc68s7be4098t6pg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "alodokter.Alodokter-pa-test"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490632169396:android:f77a84b6eed2adfe",
+        "android_client_info": {
+          "package_name": "com.firebase.samples.logindemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490632169396-b2976irgp0l11gigdbeqb8f4dgq2itn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5Zjykts8BDrF5Cp-qIO361XkaSywba0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490632169396-b2976irgp0l11gigdbeqb8f4dgq2itn2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "490632169396-0ek3mtf8lkpnuqd4fc68s7be4098t6pg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "alodokter.Alodokter-pa-test"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
