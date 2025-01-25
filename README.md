@@ -4,6 +4,10 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 App Integrate google book & Firebase firestore
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
+![Simulator Screenshot - iPhone 16 Pro - 2025-01-25 at 22 37 12](https://github.com/user-attachments/assets/d3c19b31-e8e1-4cfd-b85b-eea47b255cc2)
+
+
+
 ## Step 1: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
