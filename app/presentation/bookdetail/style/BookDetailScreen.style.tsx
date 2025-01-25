@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+          flex: 1,
           flexDirection: 'column',  
           justifyContent: 'center',  
           alignItems: 'center', 
@@ -75,5 +75,5 @@ const styles = StyleSheet.create({
         marginLeft: 4,
       },
     });
-    
+
   export default styles;

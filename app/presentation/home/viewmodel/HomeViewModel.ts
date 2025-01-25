@@ -22,14 +22,22 @@ export const useHomeViewModel = () => {
             setBooks([]);
             const data = await bookRepository.searchBooks(keyword);
             
-            // const updatedBooks =  data.items.map(book => {
-            //     const isWishlist = wishlist.some(item => item.bookId === book.id);
-            //      book.volumeInfo.isWishlist = isWishlist ?  true : false;
-            //      console.log("Heloooooo", isWishlist);
-            //   });
-          
-            const mappedBooks = data.items.map(transformApiDataToBook)
-            setBooks(mappedBooks); // Updated state Book
+            const updatedBooks = data.items.map((book) => {
+                const isWishlist = wishlist.some((item) => item.bookId === book.id);
+                
+                return {
+                  ...book,
+                  volumeInfo: {
+                    ...book.volumeInfo,
+                    isWishlist: isWishlist,
+                  },
+                };
+              });
+              
+              console.log("Wisshhhhh", updatedBooks.length);
+              
+              const mappedBooks = updatedBooks.map(transformApiDataToBook);
+              setBooks(mappedBooks);
         } catch (err) {
            
             setError('Error fetching data');

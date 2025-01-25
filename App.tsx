@@ -15,17 +15,15 @@ import BookDetailScreen from './app/presentation/bookdetail/BookDetailScreen';
 import store from './app/store/store';
 import { Book } from './app/model/BookModel';
 import SplashScreen from './app/presentation/splash/SplashScreen';
-
+import ProfileScreen from './app/presentation/profile/ProfileScreen';
 export type RootStackParamList = {
   Splash: {  }; 
   Home: {  }; 
   Wishlist: { }; 
   BookDetail: {book: Book}; 
+  Profile:{ };
 };
 const Stack = createStackNavigator();
-
-
-
 
 function App(): React.JSX.Element {
  
@@ -43,6 +41,9 @@ function App(): React.JSX.Element {
          options={{ headerShown: false }} 
         />
         <Stack.Screen name="BookDetail" component={BookDetailScreen} 
+         options={{ headerShown: false }} 
+        />
+       <Stack.Screen name="Profile" component={ProfileScreen} 
          options={{ headerShown: false }} 
         />
       </Stack.Navigator>

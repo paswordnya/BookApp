@@ -50,29 +50,22 @@ const HomeScreen = ({ navigation }: Props) =>{
 
     const navigationToBookDetail = (book:Book) => {
         navigation.navigate('BookDetail',{book});
-      };
+    };
 
       useEffect(() => {
         fetchWishlist()
         searchBooks('keyword'); 
       }, []); 
-      useEffect(() => {
-        setBooks(allBooks);
-      }, [allBooks]);
-      
-      const [books, setBooks] = useState(allBooks);
-
+     
       const toggleWishlist = (bookData:Book) => {
-        const updatedBooks = books.map((book) => {
-          if (book.id === bookData.id) {
-            book.volumeInfo.isWishlist = !book.volumeInfo.isWishlist 
-            Alert.alert(book.volumeInfo.isWishlist ? 'Added to Wishlist!' : 'Remove From Wishlist!' );
-            book.volumeInfo.isWishlist ?    addToWishlist(bookData) : removeFromWishlist(bookData.id)
-            return { ...book, isWishlisted: !book.volumeInfo.isWishlist };        
-          }
-          return book;
-        });
-        setBooks(updatedBooks);
+        try{
+          bookData.volumeInfo.isWishlist = !bookData.volumeInfo.isWishlist 
+          Alert.alert(bookData.volumeInfo.isWishlist ? 'Added to Wishlist!' : 'Remove From Wishlist!' );
+          bookData.volumeInfo.isWishlist ?  addToWishlist(bookData) : removeFromWishlist(bookData.id);
+        }catch(err) {
+          console.log(err)   
+        }
+        
       };
 
 
@@ -115,8 +108,8 @@ const HomeScreen = ({ navigation }: Props) =>{
                 }}
                 style={styles.profileIcon}
                 />
-                 </TouchableOpacity>
-                <Text style={styles.title}>Home Screen</Text>
+           </TouchableOpacity>
+                <Text style={styles.title}>Book App</Text>
                 <TouchableOpacity onPress={() => navigationToWishlist()} >
                     <FontAwesome name="shopping-bag" size={18} color="#FFFFFF" />
                 </TouchableOpacity>
