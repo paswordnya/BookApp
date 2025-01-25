@@ -4,7 +4,11 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 App Integrate google book & Firebase firestore
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-![Simulator Screenshot - iPhone 16 Pro - 2025-01-25 at 22 37 12](https://github.com/user-attachments/assets/d3c19b31-e8e1-4cfd-b85b-eea47b255cc2)
+
+
+<img src="https://github.com/user-attachments/assets/e53d98fe-23e8-404e-8ecd-1511e47a9bb5" alt="Deskripsi Gambar" width="300" />
+<img src="https://github.com/user-attachments/assets/69da000c-40f0-4695-8058-e6a91acee7cb" alt="Deskripsi Gambar" width="300" />
+<img src="https://github.com/user-attachments/assets/045e7200-a797-4549-aedf-2337be133110" alt="Deskripsi Gambar" width="300" />
 
 
 
