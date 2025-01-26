@@ -6,9 +6,9 @@ App Integrate google book & Firebase firestore
 
 
 
-<img src="https://github.com/user-attachments/assets/e53d98fe-23e8-404e-8ecd-1511e47a9bb5" alt="Deskripsi Gambar" width="300" />
-<img src="https://github.com/user-attachments/assets/69da000c-40f0-4695-8058-e6a91acee7cb" alt="Deskripsi Gambar" width="300" />
-<img src="https://github.com/user-attachments/assets/045e7200-a797-4549-aedf-2337be133110" alt="Deskripsi Gambar" width="300" />
+<img src="https://github.com/user-attachments/assets/e53d98fe-23e8-404e-8ecd-1511e47a9bb5" alt="Deskripsi Gambar" width="250" />
+<img src="https://github.com/user-attachments/assets/69da000c-40f0-4695-8058-e6a91acee7cb" alt="Deskripsi Gambar" width="250" />
+<img src="https://github.com/user-attachments/assets/88e4736e-88a8-499f-b049-ac7ebad255bc" alt="Deskripsi Gambar" width="250" />
 
 
 
