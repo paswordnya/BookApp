@@ -70,8 +70,8 @@ const WishlistScreen = ({navigation}: Props) =>{
          
 
     return(
-        <SafeAreaView style={styles.container}>
-        <View >
+        <SafeAreaView style={styles.safeArea}>
+        <View style={styles.container}>
         <CustomToolbar title="Wishlist" onBackPress={handleBackPress} />
             <View style={styles.content}>
                 <FlatList

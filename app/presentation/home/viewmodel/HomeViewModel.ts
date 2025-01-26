@@ -21,10 +21,8 @@ export const useHomeViewModel = () => {
         try {
             setBooks([]);
             const data = await bookRepository.searchBooks(keyword);
-            
             const updatedBooks = data.items.map((book) => {
-                const isWishlist = wishlist.some((item) => item.bookId === book.id);
-                
+            const isWishlist = wishlist.some((item) => item.bookId === book.id);
                 return {
                   ...book,
                   volumeInfo: {
@@ -32,12 +30,9 @@ export const useHomeViewModel = () => {
                     isWishlist: isWishlist,
                   },
                 };
-              });
-              
-              console.log("Wisshhhhh", updatedBooks.length);
-              
-              const mappedBooks = updatedBooks.map(transformApiDataToBook);
-              setBooks(mappedBooks);
+            });
+            const mappedBooks = updatedBooks.map(transformApiDataToBook);
+            setBooks(mappedBooks);
         } catch (err) {
            
             setError('Error fetching data');
@@ -89,5 +84,5 @@ export const useHomeViewModel = () => {
 
     
 
-    return { allBooks, wishlist, loading, error, searchBooks,  addToWishlist ,removeFromWishlist, fetchWishlist};
+    return { allBooks, wishlist, loading, error, searchBooks,  addToWishlist ,removeFromWishlist, fetchWishlist,setBooks};
 };

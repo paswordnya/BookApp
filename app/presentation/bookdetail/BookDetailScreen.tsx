@@ -57,10 +57,10 @@ const BookDetailScreen = ({navigation}: Props) =>{
         }
       };
 
-    return(<SafeAreaView style={styles.container}>
-              <View >
-                <CustomToolbar title="Detail" onBackPress={handleBackPress} />
-                <View style={styles.content}>
+    return(<SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+              <CustomToolbar title="Detail" onBackPress={handleBackPress} />
+        <View style={styles.content}>
                 <ScrollView >
                   {/* Gambar Buku */}
                   <Image
@@ -96,7 +96,7 @@ const BookDetailScreen = ({navigation}: Props) =>{
               onPress={() => toggleWishlist(bookDetail.id)}>
               <FontAwesome name="heart" size={24} color={bookDetail.volumeInfo.isWishlist ? "#E04848"  : "#808080" }/>
             </TouchableOpacity>
-          </View>
+            </View>
       </SafeAreaView>);
 }
 

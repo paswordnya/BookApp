@@ -24,7 +24,7 @@ const HomeScreen = ({ navigation }: Props) =>{
 
     const insets = useSafeAreaInsets(); // Mendapatkan safe area insets
      
-    const { allBooks, wishlist, loading, error, searchBooks, addToWishlist,removeFromWishlist, fetchWishlist } = useHomeViewModel();
+    const { allBooks, wishlist, loading, error, searchBooks, addToWishlist,removeFromWishlist, fetchWishlist,setBooks } = useHomeViewModel();
 
     const [searchText, setSearchText] = useState('');
 
@@ -39,6 +39,9 @@ const HomeScreen = ({ navigation }: Props) =>{
             Alert.alert("Please enter a search keyword.");
           }
     };
+    const goToProfileScreen = () => {
+      navigation.navigate('Profile',{})
+    }
 
     function authorsToString(authors: string[]): string {
         if (authors.length === 0) {
@@ -50,22 +53,31 @@ const HomeScreen = ({ navigation }: Props) =>{
 
     const navigationToBookDetail = (book:Book) => {
         navigation.navigate('BookDetail',{book});
-    };
+      };
 
-      useEffect(() => {
-        fetchWishlist()
-        searchBooks('keyword'); 
-      }, []); 
+    useEffect(() => {
+      fetchWishlist()
+      searchBooks('keyword'); 
+    }, []); 
      
       const toggleWishlist = (bookData:Book) => {
-        try{
-          bookData.volumeInfo.isWishlist = !bookData.volumeInfo.isWishlist 
-          Alert.alert(bookData.volumeInfo.isWishlist ? 'Added to Wishlist!' : 'Remove From Wishlist!' );
-          bookData.volumeInfo.isWishlist ?  addToWishlist(bookData) : removeFromWishlist(bookData.id);
-        }catch(err) {
-          console.log(err)   
-        }
-        
+        const updatedBooks = allBooks.map((book) => {
+          if (book.id === bookData.id) {
+            Alert.alert(!book.volumeInfo.isWishlist ? 'Added to Wishlist!' : 'Remove From Wishlist!' );
+            !book.volumeInfo.isWishlist ?  addToWishlist(book) : removeFromWishlist(book.id);
+         
+            return {
+              ...book,
+              volumeInfo: {
+                ...book.volumeInfo,
+                isWishlist: !book.volumeInfo.isWishlist,
+              },
+            };
+          }
+         
+          return book;
+        });
+       setBooks(updatedBooks); 
       };
 
 
@@ -101,7 +113,7 @@ const HomeScreen = ({ navigation }: Props) =>{
         <SafeAreaView style={styles.container}>
             {/* Toolbar  */}
             <View style={styles.toolbar}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> goToProfileScreen()}>
                 <Image
                 source={{
                     uri: 'https://media.licdn.com/dms/image/v2/C5103AQGFr7U_iC2sUg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1563254503849?e=1743033600&v=beta&t=1xMAUGyR0v7wEKYGIqcdaZLVkrlI4sQOz0E8PcIJdqo', // Gambar profil contoh

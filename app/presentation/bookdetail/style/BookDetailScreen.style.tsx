@@ -2,22 +2,18 @@ import {StyleSheet} from 'react-native';
 
 
 const styles = StyleSheet.create({
-    container: {
-          flex: 1,
-          flexDirection: 'column',  
-          justifyContent: 'center',  
-          alignItems: 'center', 
-          backgroundColor: '#fff',
-    },
-  
-  
-    content:{
+    safeArea: {
         flex: 1,
+        backgroundColor: '#E04848', // Background Safe Area
+      },
+    container: {
+        flex: 1, 
+    },
+    content:{
+        height:'100%',
         flexDirection: 'column', 
         justifyContent: 'center',  
         alignItems: 'center', 
-        width: '100%',
-        height: '100%',
         backgroundColor: '#FFFFFF',
         paddingHorizontal:12,
         paddingVertical:2,
